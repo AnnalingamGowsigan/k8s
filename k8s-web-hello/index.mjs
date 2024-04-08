@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
     const eth0 = os.networkInterfaces().eth0;
     const ipAddress = eth0 ? eth0[0].address : "N/A";
 
-    const helloMessage = `Hello World from Node.js Server running on ${os.hostname()} with IP ${ipAddress}`;
+    const helloMessage = `VERSION2: Hello World from Node.js Server running on ${os.hostname()} with IP ${ipAddress}`;
     console.log(helloMessage);
     res.send(helloMessage);
   } catch (error) {
