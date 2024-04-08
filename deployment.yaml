@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: k8s-web-hello
 spec:
+  replicas: 5
   selector:
     matchLabels:
       app: k8s-web-hello
@@ -11,7 +12,6 @@ spec:
       labels:
         app: k8s-web-hello
     spec:
-      replicas: 5
       containers:
         - name: k8s-web-hello
           image: gowsigan/k8s-web-hello
